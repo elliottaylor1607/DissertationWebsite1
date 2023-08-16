@@ -156,3 +156,71 @@ contained within the dbanner div on the Home page.*/
 	color: red; 
 	width: 400px;
 }  
+
+/*This class specifies the color, font-size, height, text-align, background-color and padding-top properties for the navigation bar of the website.*/
+.navigation{ 
+	color: white;
+	font-size: 16px;   
+	height: 100%;   
+	text-align: center;
+	background-color: red;
+	padding-top: 10px;  
+	width: 100%;     
+}   
+ 
+/*This class specifies the border and color properties for when each navigation link is active within the responsive navigation.*/ 
+.active {
+	border: white solid 2px; 
+	color: red;   
+}
+
+/*This class contains the overflow, padding-right, padding-left, padding-top, background-color and font-weight properties for when each webpage is minimised
+and hides the navigation links.*/
+.topnav {
+	overflow: hidden;
+	padding-right: 1%;
+	padding-left: 0%;
+	padding-top: 1%; 
+	padding-bottom: 1%; 
+	background-color: red; 
+	font-weight: bold;      
+}
+
+/*This class specifies the float, display, color, padding, text-decoration and font-size properties for when each webpage is minimised.*/
+.topnav a {
+	float: center;
+	color: white;  
+	padding: 12px; 
+	text-decoration: none;
+	font-size: 16px; 
+	font-family: Verdana;  
+}
+
+/*This class specifies the background-color and color properties for when the navigation links and the navigation icon are hovered over.*/
+.topnav a:hover {
+	background-color: white;
+	color: red;
+}
+
+/*This class displays an icon for when the screen is less than 800 pixels wide if each page is minimised. */
+.topnav .icon { display: none;}  
+
+/*This class hides all navigation links when the screen is less than 800 pixels wide and displays the navigation icon which displays the links when 
+selected.*/
+@media screen and (max-width: 800px) {
+	.topnav {height: auto;}  
+	.topnav a:not(:first-child) {display: none;}
+	.topnav a.icon {
+		float: right;
+		display: block;
+	}
+}
+
+/*This class presents users with all the navigation links when the navigation icon is selected if each webpage is minimised.*/ 
+@media screen and (max-width: 800px) {   
+	.topnav.responsive {position: relative;}
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: center;
+	}       
